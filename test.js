@@ -1,2 +1,4 @@
-Int16Array ahihi;
-hello
+function reusableFunction() {
+    console.log("Hi World");
+}
+reusableFunction();
