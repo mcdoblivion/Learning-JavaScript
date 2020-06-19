@@ -1,23 +1,13 @@
-// Declare the myGlobal variable below this line
-var myGlobal = 10;
-
-function fun1() {
-    // Assign 5 to oopsGlobal Here
-    oopsGlobal = 5;
+function myLocalScope() {
+    'use strict';
+  
+    // Only change code below this line
+    var myVar = "a";
+    console.log('inside myLocalScope', myVar);
   }
+  myLocalScope();
   
-  // Only change code above this line
+  // Run and check the console
+  // myVar is not defined outside of myLocalScope
+  console.log('outside myLocalScope', myVar);
   
-  function fun2() {
-    var output = "";
-    if (typeof myGlobal != "undefined") {
-      output += "myGlobal: " + myGlobal;
-    }
-    if (typeof oopsGlobal != "undefined") {
-      output += " oopsGlobal: " + oopsGlobal;
-    }
-    console.log(output);
-  }
-  
-  fun1();
-  fun2();
