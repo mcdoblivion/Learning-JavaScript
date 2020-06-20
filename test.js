@@ -1,11 +1,11 @@
 // Setup
 var testObj = {
-    "an entree": "hamburger",
-    "my side": "veggies",
-    "the drink": "water",
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas",
 };
 
 // Only change code below this line
 
-var entreeValue = testObj["an entree"]; // Change this line
-var drinkValue = testObj["the drink"]; // Change this line
+var playerNumber = 16; // Change this line
+var player = testObj[playerNumber]; // Change this line
