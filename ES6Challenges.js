@@ -1,6 +1,11 @@
-const arr1 = ["JAN", "FEB", "MAR", "APR", "MAY"];
-let arr2;
+const HIGH_TEMPERATURES = {
+    yesterday: 75,
+    today: 77,
+    tomorrow: 80,
+};
 
-arr2 = [...arr1]; // Change this line
+// Only change code below this line
 
-console.log(arr2);
+const { today, tomorrow } = HIGH_TEMPERATURES;
+
+// Only change code above this line
