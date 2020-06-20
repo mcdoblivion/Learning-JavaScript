@@ -1,12 +1,10 @@
-// Only change code below this line
-var arr = [];
-function countdown(n) {
-    if (n < 1) {
-        return [];
+function rangeOfNumbers(startNum, endNum) {
+    if (startNum == endNum) {
+        return [startNum];
     } else {
-        const countArr = countdown(n - 1);
-        countArr.unshift(n);
-        return countArr;
+        const arr = rangeOfNumbers(startNum, endNum - 1);
+        arr.push(endNum);
+        return arr;
     }
 }
-// Only change code above this line
+console.log(rangeOfNumbers(6, 9));
