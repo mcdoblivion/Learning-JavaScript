@@ -1,12 +1,15 @@
-function testLogicalOr(val) {
+function testElse(val) {
+    var result = "";
     // Only change code below this line
 
-    if (val < 10 || val > 20) {
-        return "Outside";
+    if (val > 5) {
+        result = "Bigger than 5";
+    } else {
+        result = "5 or Smaller";
     }
 
     // Only change code above this line
-    return "Inside";
+    return result;
 }
 
-testLogicalOr(15);
+testElse(4);
