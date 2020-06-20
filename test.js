@@ -1,8 +1,11 @@
-var myDog = {
-    // Only change code below this line
-    name: "My Dog",
-    legs: 4,
-    tails: 1,
-    friends: ["Cat", "Other dog"],
-    // Only change code above this line
+// Setup
+var testObj = {
+    hat: "ballcap",
+    shirt: "jersey",
+    shoes: "cleats",
 };
+
+// Only change code below this line
+
+var hatValue = testObj.hat; // Change this line
+var shirtValue = testObj.shirt; // Change this line
