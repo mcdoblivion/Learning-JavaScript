@@ -1,26 +1,15 @@
-var myMusic = [
-    {
-      "artist": "Billy Joel",
-      "title": "Piano Man",
-      "release_year": 1973,
-      "formats": [
-        "CD",
-        "8T",
-        "LP"
-      ],
-      "gold": true
-    },
-    {
-        "artist": "Billy Joel",
-      "title": "Piano Man",
-      "release_year": 1973,
-      "formats": [
-        "CD",
-        "8T",
-        "LP"
-      ],
-      "gold": true
+// Setup
+var myStorage = {
+    "car": {
+      "inside": {
+        "glove box": "maps",
+        "passenger seat": "crumbs"
+       },
+      "outside": {
+        "trunk": "jack"
+      }
     }
-    // Add a record here
-  ];
+  };
+  
+  var gloveBoxContents = myStorage.car.inside["glove box"]; // Change this line
   
