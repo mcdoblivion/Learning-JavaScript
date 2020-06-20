@@ -1,15 +1,15 @@
-function testGreaterOrEqual(val) {
-    if (val >= 20) {
+function testLessThan(val) {
+    if (val < 25) {
         // Change this line
-        return "20 or Over";
+        return "Under 25";
     }
 
-    if (val >= 10) {
+    if (val < 55) {
         // Change this line
-        return "10 or Over";
+        return "Under 55";
     }
 
-    return "Less than 10";
+    return "55 or Over";
 }
 
-testGreaterOrEqual(10);
+testLessThan(10);
