@@ -1,10 +1,13 @@
-function checkScope() {
+function printManyTimes(str) {
     "use strict";
-    let i = "function scope";
-    if (true) {
-        let i = "block scope";
-        console.log("Block scope i is: ", i);
+
+    // Only change code below this line
+
+    const SENTENCE = str + " is cool!";
+    for (let i = 0; i < str.length; i += 2) {
+        console.log(SENTENCE);
     }
-    console.log("Function scope i is: ", i);
-    return i;
+
+    // Only change code above this line
 }
+printManyTimes("freeCodeCamp");
