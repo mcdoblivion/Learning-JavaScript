@@ -2,8 +2,6 @@
 var myArray = [];
 
 // Only change code below this line
-var i = 5;
-while (i >= 0) {
+for (var i = 1; i <= 5; i++) {
     myArray.push(i);
-    i--;
 }
