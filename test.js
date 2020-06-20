@@ -1,5 +1,12 @@
-function checkSign(num) {
-    return num < 0 ? "negative" : num == 0 ? "zero" : "positive";
+// Only change code below this line
+var arr = [];
+function countdown(n) {
+    if (n < 1) {
+        return [];
+    } else {
+        const countArr = countdown(n - 1);
+        countArr.unshift(n);
+        return countArr;
+    }
 }
-
-checkSign(10);
+// Only change code above this line
