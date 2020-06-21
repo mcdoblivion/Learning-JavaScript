@@ -1,5 +1,4 @@
-// Only change code below this line
-let chewieRegex = /Aa*/g; // Change this line
-// Only change code above this line
-
-let result = chewieQuote.match(chewieRegex);
+let text = "<h1>Winter is coming</h1>";
+let myRegex = /<.*?>/; // Change this line
+let result = text.match(myRegex);
+console.log(result);
