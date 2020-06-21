@@ -1,12 +1,19 @@
-const stats = {
-    max: 56.78,
-    standard_deviation: 4.34,
-    median: 34.54,
-    mode: 23.87,
-    min: -0.75,
-    average: 35.85,
+const result = {
+    success: ["max-length", "no-amd", "prefer-arrow-functions"],
+    failure: ["no-var", "var-on-top", "linebreak"],
+    skipped: ["id-blacklist", "no-dup-keys"],
 };
+function makeList(arr) {
+    "use strict";
 
-// Only change code below this line
-const half = ({max, min}) => (max + min) / 2.0;
-// Only change code above this line
+    // Only change code below this line
+    const resultDisplayArray = [];
+    for (let i = 0; i < arr.length; i++) {
+        resultDisplayArray.push(`<li class="text-warning">${arr[i]}</li>`);
+    }
+    // Only change code above this line
+
+    return resultDisplayArray;
+}
+
+const resultDisplayArray = makeList(result.failure);
