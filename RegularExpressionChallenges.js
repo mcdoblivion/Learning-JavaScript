@@ -1,3 +1,3 @@
-let haStr = "Hazzzzah";
-let haRegex = /Haz{4,}ah/g; // Change this line
-let result = haRegex.test(haStr);
+let timStr = "Timmmmber";
+let timRegex = /Tim{4}ber/g; // Change this line
+let result = timRegex.test(timStr);
