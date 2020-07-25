@@ -1,3 +1,3 @@
-let ohStr = "Ohhh no";
-let ohRegex = /Oh{3,6}\s*no/g; // Change this line
-let result = ohRegex.test(ohStr);
+let haStr = "Hazzzzah";
+let haRegex = /Haz{4,}ah/g; // Change this line
+let result = haRegex.test(haStr);
