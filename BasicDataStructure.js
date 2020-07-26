@@ -1,1 +1,5 @@
-let yourArray = [1, "2", true, 3, "abdsjdjskdj"]; // Change this line
+let myArray = ["a", "b", "c", "d"];
+// Only change code below this line
+myArray[1] = 2;
+// Only change code above this line
+console.log(myArray);
