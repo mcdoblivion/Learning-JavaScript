@@ -1,9 +1,7 @@
-function mixedNumbers(arr) {
-    // Only change code below this line
-    arr.unshift('I', 2, 'three');
-    arr.push(7, 'VIII', 9);
-    // Only change code above this line
-    return arr;
+function popShift(arr) {
+    let popped = arr.pop(); // Change this line
+    let shifted = arr.shift(); // Change this line
+    return [shifted, popped];
 }
 
-console.log(mixedNumbers(["IV", 5, "six"]));
+console.log(popShift(["challenge", "is", "not", "complete"]));
