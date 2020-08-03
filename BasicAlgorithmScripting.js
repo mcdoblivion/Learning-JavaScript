@@ -1,6 +1,10 @@
-function factorialize(num) {
-    if (num <= 1) return 1;
-    else return factorialize(num - 1) * num;
+function findLongestWordLength(str) {
+    let arr = str.split(" ");
+    let maxLength = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length > maxLength) maxLength = arr[i].length;
+    }
+    return maxLength;
 }
 
-factorialize(5);
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
