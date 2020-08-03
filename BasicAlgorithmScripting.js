@@ -1,6 +1,11 @@
-function convertToF(celsius) {
-    let fahrenheit = celsius * 9 / 5 + 32;
-    return fahrenheit;
+function reverseString(str) {
+    let arr = str.split('');
+    str = '';
+    for(let i = arr.length - 1; i >= 0; i--){
+        str += arr[i];
+    }
+    return str;
 }
 
-convertToF(30);
+reverseString("hello");
+console.log(reverseString("123"));
