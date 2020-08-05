@@ -1,5 +1,10 @@
-function confirmEnding(str, target) {
-    return str.substring(str.length - target.length, str.length) == target;
+function repeatStringNumTimes(str, num) {
+    if (num < 0) return "";
+    let newStr = "";
+    for (let i = 0; i < num; i++) {
+        newStr += str;
+    }
+    return newStr;
 }
 
-confirmEnding("Bastian", "n");
+repeatStringNumTimes("abc", 3);
