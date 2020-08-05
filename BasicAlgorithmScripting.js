@@ -1,10 +1,10 @@
-function getIndexToIns(arr, num) {
-    arr.sort((a,b) => a - b);
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] >= num) return i;
+function mutation(arr) {
+    arr[0] = arr[0].toLowerCase();
+    arr[1] = arr[1].toLowerCase();
+    for (let i = 0; i < arr[1].length; i++) {
+        if (arr[0].indexOf(arr[1][i]) == -1) return false;
     }
-    return arr.length;
+    return true;
 }
 
-getIndexToIns([40, 60], 50);
-console.log(getIndexToIns([5, 3, 20, 3], 5));
+mutation(["hello", "hey"]);
