@@ -1,12 +1,8 @@
-function titleCase(str) {
-    str = str.toLowerCase();
-    let arr = str.split(" ");
-    let newStr = "";
-    for (let i = 0; i < arr.length; i ++) {
-        newStr = newStr + arr[i][0].toUpperCase() + arr[i].substring(1) + " ";
-    }
-    return newStr.trim();
+function frankenSplice(arr1, arr2, n) {
+    let arr = [...arr2];
+    arr.splice(n, 0, ...arr1);
+    return arr;
 }
 
-titleCase("I'm a little tea pot");
-console.log(titleCase("I'm a little tea pot"));
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
+console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
