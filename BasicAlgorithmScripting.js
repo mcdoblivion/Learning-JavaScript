@@ -1,10 +1,15 @@
-function mutation(arr) {
-    arr[0] = arr[0].toLowerCase();
-    arr[1] = arr[1].toLowerCase();
-    for (let i = 0; i < arr[1].length; i++) {
-        if (arr[0].indexOf(arr[1][i]) == -1) return false;
+function chunkArrayInGroups(arr, size) {
+    let newArr = [];
+    while (arr.length > 0) {
+        let temp = [];
+        for (let j = 0; j < size; j++) {
+            if(arr.length > 0) temp.push(arr.shift());
+        }
+        newArr.push(temp);
     }
-    return true;
+    return newArr;
 }
 
-mutation(["hello", "hey"]);
+chunkArrayInGroups(["a", "b", "c", "d"], 2);
+console.log(chunkArrayInGroups(["a", "b", "c", "d"], 2));
+console.log(chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2));
