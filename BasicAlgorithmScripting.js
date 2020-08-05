@@ -1,8 +1,8 @@
-function frankenSplice(arr1, arr2, n) {
-    let arr = [...arr2];
-    arr.splice(n, 0, ...arr1);
+function bouncer(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        if (!arr[i]) arr.splice(i--, 1);
+    }
     return arr;
 }
 
-frankenSplice([1, 2, 3], [4, 5, 6], 1);
-console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
+bouncer([7, "ate", "", false, 9]);
