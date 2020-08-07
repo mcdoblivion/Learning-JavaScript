@@ -1,7 +1,7 @@
-function Dog() {
-    this.name = "Rupert";
-    this.color = "brown";
+function Dog(name, color) {
+    this.name = name;
+    this.color = color;
     this.numLegs = 4;
 }
-// Only change code below this line
-let hound = new Dog;
+
+let terrier = new Dog;
