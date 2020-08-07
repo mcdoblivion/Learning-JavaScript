@@ -1,7 +1,9 @@
 let dog = {
     name: "Spot",
     numLegs: 4,
+    sayLegs: function() {
+        return "This dog has " + this.numLegs + " legs.";
+    }
 };
-// Only change code below this line
-console.log(dog.name);
-console.log(dog.numLegs);
+
+dog.sayLegs();
