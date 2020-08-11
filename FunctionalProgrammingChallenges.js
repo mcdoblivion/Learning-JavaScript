@@ -1,7 +1,7 @@
-function sliceArray(anim, beginSlice, endSlice) {
+function nonMutatingSplice(cities) {
     // Only change code below this line
-    return anim.slice(beginSlice, endSlice);
+    return cities.slice(0, 3);
     // Only change code above this line
 }
-var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
-sliceArray(inputAnim, 1, 3);
+var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+nonMutatingSplice(inputCities);
