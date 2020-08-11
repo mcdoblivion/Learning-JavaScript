@@ -1,16 +1,7 @@
-// The global variable
-var s = [23, 65, 98, 5];
-
-Array.prototype.myFilter = function (callback) {
+function sliceArray(anim, beginSlice, endSlice) {
     // Only change code below this line
-    var newArray = [];
-    for (let i = 0; i < this.length; i++) {
-        if (callback(this[i])) newArray.push(this[i]);
-    }
+    return anim.slice(beginSlice, endSlice);
     // Only change code above this line
-    return newArray;
-};
-
-var new_s = s.myFilter(function (item) {
-    return item % 2 === 1;
-});
+}
+var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
+sliceArray(inputAnim, 1, 3);
