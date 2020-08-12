@@ -1,7 +1,8 @@
-function sentensify(str) {
-    // Only change code below this line
-    let arr = str.split(/\W/);
-    return arr.join(" ");
-    // Only change code above this line
+// Only change code below this line
+function urlSlug(title) {
+    let lowerCase = title.toLowerCase().trim();
+    let arr = lowerCase.split(/\s+/);
+    return arr.join("-");
 }
-sentensify("May-the-force-be-with-you");
+// Only change code above this line
+console.log(urlSlug(" Winter Is  Coming"));
