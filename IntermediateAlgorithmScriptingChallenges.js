@@ -1,10 +1,17 @@
-function spinalCase(str) {
-    let words = str
-        .replace(/([a-z])([A-Z])/g, "$1_$2")
-        .toLowerCase()
-        .split(/[\W | _]+/);
-    return words.join("-");
+function translatePigLatin(str) {
+    let characters = str.split("");
+    let consonants = "ueoai";
+    if (consonants.indexOf(characters[0]) >= 0) return str + "way";
+
+    let consonant = [];
+    let i = 0;
+    while (consonants.indexOf(characters[i]) < 0) {
+        consonant.push(characters.shift());
+        if (i == characters.length) break;
+    }
+    characters.push(...consonant);
+    return characters.join("") + "ay";
 }
 
-spinalCase("This Is Spinal Tap");
-console.log(spinalCase("thisIsSpinalTap"));
+translatePigLatin("consonant");
+console.log(translatePigLatin("rhythm"));
