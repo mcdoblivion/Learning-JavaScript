@@ -1,7 +1,7 @@
-function alphabeticalOrder(arr) {
+var globalArray = [5, 6, 3, 2, 9];
+function nonMutatingSort(arr) {
     // Only change code below this line
-    arr.sort((a, b) => a === b ? 0 : a < b ? -1 : 1);
-    return arr;
+    return arr.slice().sort((a, b) => a - b);
     // Only change code above this line
 }
-alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+nonMutatingSort(globalArray);
