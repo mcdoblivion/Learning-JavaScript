@@ -1,12 +1,7 @@
-const squareList = (arr) => {
+function alphabeticalOrder(arr) {
     // Only change code below this line
-    let positiveIntegerArr = arr.filter(
-        (realNumber) => Number.isInteger(realNumber) && realNumber > 0
-    );
-    let squareArr = positiveIntegerArr.map((number) => number * number);
-    return squareArr;
+    arr.sort((a, b) => a === b ? 0 : a < b ? -1 : 1);
+    return arr;
     // Only change code above this line
-};
-
-const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
-console.log(squaredIntegers);
+}
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
