@@ -1,8 +1,6 @@
-// Only change code below this line
-function urlSlug(title) {
-    let lowerCase = title.toLowerCase().trim();
-    let arr = lowerCase.split(/\s+/);
-    return arr.join("-");
+function checkPositive(arr) {
+    // Only change code below this line
+    return arr.every((value) => value > 0);
+    // Only change code above this line
 }
-// Only change code above this line
-console.log(urlSlug(" Winter Is  Coming"));
+checkPositive([1, 2, 3, -4, 5]);
