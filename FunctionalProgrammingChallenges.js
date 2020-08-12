@@ -1,6 +1,10 @@
-function checkPositive(arr) {
+function add(x) {
     // Only change code below this line
-    return arr.some(value => value > 0);
+    return function (y) {
+        return function (z) {
+            return x + y + z;
+        };
+    };
     // Only change code above this line
 }
-checkPositive([1, 2, 3, -4, 5]);
+add(10)(20)(30);
