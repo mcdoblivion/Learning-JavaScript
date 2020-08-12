@@ -1,5 +1,24 @@
-function destroyer(arr, ...valueToRemove) {
-    return arr.filter(element => valueToRemove.indexOf(element) < 0);
+function whatIsInAName(collection, source) {
+    var arr = [];
+    // Only change code below this line
+    arr = collection.filter((element) => {
+        let properties = Object.keys(source);
+        for (let i = 0; i < properties.length; i++) {
+            if (!element.hasOwnProperty(properties[i])) return false;
+            else if (element[properties[i]] != source[properties[i]])
+                return false;
+        }
+        return true;
+    });
+    // Only change code above this line
+    return arr;
 }
 
-destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+whatIsInAName(
+    [
+        { first: "Romeo", last: "Montague" },
+        { first: "Mercutio", last: null },
+        { first: "Tybalt", last: "Capulet" },
+    ],
+    { last: "Capulet" }
+);
