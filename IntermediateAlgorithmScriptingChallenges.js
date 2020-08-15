@@ -1,14 +1,14 @@
-function uniteUnique(...arr) {
-    let concatAll = arr.reduce(
-        (concatArr, element) => concatArr.concat(element),
-        []
-    );
+function convertHTML(str) {
+    const htmlEntities = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&apos;",
+    };
 
-    let result = [];
-    for (let i = 0; i < concatAll.length; i++) {
-        if (result.indexOf(concatAll[i]) == -1) result.push(concatAll[i]);
-    }
-    return result;
+    return str.replace(/([&<>\"'])/g, match => htmlEntities[match]);
 }
 
-uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+convertHTML("Dolce & Gabbana");
+console.log(convertHTML("Dolce & Gabbana"));
