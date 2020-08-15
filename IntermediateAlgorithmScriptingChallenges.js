@@ -1,17 +1,10 @@
-function translatePigLatin(str) {
-    let characters = str.split("");
-    let consonants = "ueoai";
-    if (consonants.indexOf(characters[0]) >= 0) return str + "way";
-
-    let consonant = [];
-    let i = 0;
-    while (consonants.indexOf(characters[i]) < 0) {
-        consonant.push(characters.shift());
-        if (i == characters.length) break;
+function myReplace(str, before, after) {
+    if (before[0] == before[0].toUpperCase()) {
+        after = after[0].toUpperCase() + after.substring(1);
+    } else {
+        after = after[0].toLowerCase() + after.substring(1);
     }
-    characters.push(...consonant);
-    return characters.join("") + "ay";
+    return str.replace(before, after);
 }
 
-translatePigLatin("consonant");
-console.log(translatePigLatin("rhythm"));
+myReplace("A quick brown fox jumped over the lazy dog", "jumped", "leaped");
