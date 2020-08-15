@@ -1,11 +1,14 @@
-function fearNotLetter(str) {
-    let alphabet = "abcdefghijklmnopqrstuvwxyz";
-    for (let i = 0; i < str.length; i++) {
-        if (alphabet.indexOf(str.substring(0, i + 1)) == -1)
-            return alphabet[alphabet.indexOf(str.substring(0, i)) + i];
+function uniteUnique(...arr) {
+    let concatAll = arr.reduce(
+        (concatArr, element) => concatArr.concat(element),
+        []
+    );
+
+    let result = [];
+    for (let i = 0; i < concatAll.length; i++) {
+        if (result.indexOf(concatAll[i]) == -1) result.push(concatAll[i]);
     }
-    return undefined;
+    return result;
 }
 
-fearNotLetter("abce");
-console.log(fearNotLetter("abce"));
+uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
