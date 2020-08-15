@@ -1,11 +1,11 @@
-function pairElement(str) {
-    let characters = str.split("");
-    return characters.map((char) => {
-        if (char == "A") return ["A", "T"];
-        else if (char == "T") return ["T", "A"];
-        else if (char == "C") return ["C", "G"];
-        else if (char == "G") return ["G", "C"];
-    });
+function fearNotLetter(str) {
+    let alphabet = "abcdefghijklmnopqrstuvwxyz";
+    for (let i = 0; i < str.length; i++) {
+        if (alphabet.indexOf(str.substring(0, i + 1)) == -1)
+            return alphabet[alphabet.indexOf(str.substring(0, i)) + i];
+    }
+    return undefined;
 }
 
-pairElement("GCG");
+fearNotLetter("abce");
+console.log(fearNotLetter("abce"));
