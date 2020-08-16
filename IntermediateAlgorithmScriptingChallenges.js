@@ -1,18 +1,9 @@
-function truthCheck(collection, pre) {
-    for (let i = 0; i < collection.length; i++) {
-        if (collection[i].hasOwnProperty(pre)) {
-            if (!Boolean(collection[i][pre])) return false;
-        } else return false;
-    }
-    return true;
+function addTogether(...arr) {
+    if (!arr.every((element) => typeof element === "number")) return undefined;
+    return arr.length === 2
+        ? arr[0] + arr[1]
+        : (num) => (Number.isInteger(num) ? arr[0] + num : undefined);
 }
 
-truthCheck(
-    [
-        { user: "Tinky-Winky", sex: "male" },
-        { user: "Dipsy", sex: "male" },
-        { user: "Laa-Laa", sex: "female" },
-        { user: "Po", sex: "female" },
-    ],
-    "sex"
-);
+addTogether(2, 3);
+console.log(addTogether(2)([3]));
