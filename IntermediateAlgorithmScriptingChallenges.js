@@ -1,9 +1,32 @@
-function addTogether(...arr) {
-    if (!arr.every((element) => typeof element === "number")) return undefined;
-    return arr.length === 2
-        ? arr[0] + arr[1]
-        : (num) => (Number.isInteger(num) ? arr[0] + num : undefined);
-}
+var Person = function (firstAndLast) {
+    // Only change code below this line
+    // Complete the method below and implement the others similarly
+    let fullName = firstAndLast;
 
-addTogether(2, 3);
-console.log(addTogether(2)([3]));
+    this.getFullName = function () {
+        return fullName;
+    };
+    this.getFirstName = function () {
+        let nameArray = fullName.split(" ");
+        return nameArray[0];
+    };
+    this.getLastName = function () {
+        let nameArray = fullName.split(" ");
+        return nameArray[1];
+    };
+
+    this.setFirstName = function (name) {
+        fullName = name + " " + fullName.split(" ")[1];
+    };
+
+    this.setLastName = function (name) {
+        fullName = fullName.split(" ")[0] + " " + name;
+    };
+
+    this.setFullName = function (name) {
+        fullName = name;
+    };
+};
+
+var bob = new Person("Bob Ross");
+bob.getFullName();
