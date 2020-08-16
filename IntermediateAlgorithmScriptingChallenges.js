@@ -1,16 +1,16 @@
-function sumFibs(num) {
-    if (num == 1) return 2;
-    let fibonacci = [1, 1];
-    let sum = 2;
-    while (true) {
-        let nextNum =
-            fibonacci[fibonacci.length - 1] + fibonacci[fibonacci.length - 2];
-        if (nextNum > num) break;
+function sumPrimes(num) {
+    let isPrime = (number) => {
+        for (let i = 2; i * i <= number; i++) {
+            if (number % i === 0) return false;
+        }
+        return number > 1;
+    };
 
-        fibonacci.push(nextNum);
-        if (nextNum % 2 == 1) sum += nextNum;
+    let sum = 0;
+    for (let i = 2; i <= num; i++) {
+        if (isPrime(i)) sum += i;
     }
     return sum;
 }
 
-sumFibs(4);
+sumPrimes(10);
