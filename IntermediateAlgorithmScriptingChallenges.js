@@ -1,32 +1,15 @@
-var Person = function (firstAndLast) {
-    // Only change code below this line
-    // Complete the method below and implement the others similarly
-    let fullName = firstAndLast;
+function orbitalPeriod(arr) {
+    var GM = 398600.4418;
+    var earthRadius = 6367.4447;
+    return arr.map((element) => {
+        element.orbitalPeriod = Math.round(
+            2 *
+                Math.PI *
+                Math.sqrt(Math.pow(earthRadius + element.avgAlt, 3) / GM)
+        );
+        delete element.avgAlt;
+        return element;
+    });
+}
 
-    this.getFullName = function () {
-        return fullName;
-    };
-    this.getFirstName = function () {
-        let nameArray = fullName.split(" ");
-        return nameArray[0];
-    };
-    this.getLastName = function () {
-        let nameArray = fullName.split(" ");
-        return nameArray[1];
-    };
-
-    this.setFirstName = function (name) {
-        fullName = name + " " + fullName.split(" ")[1];
-    };
-
-    this.setLastName = function (name) {
-        fullName = fullName.split(" ")[0] + " " + name;
-    };
-
-    this.setFullName = function (name) {
-        fullName = name;
-    };
-};
-
-var bob = new Person("Bob Ross");
-bob.getFullName();
+orbitalPeriod([{ name: "sputnik", avgAlt: 35873.5553 }]);
