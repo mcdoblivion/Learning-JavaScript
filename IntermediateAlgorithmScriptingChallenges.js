@@ -1,14 +1,11 @@
-function smallestCommons(arr) {
-    let [min, max] = arr.sort((a, b) => a - b);
-
-    let gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
-    let lcm = (a, b) => (a * b) / gcd(a, b);
-
-    let currentLCM = min;
-    while (min < max) {
-        currentLCM = lcm(currentLCM, ++min);
+function dropElements(arr, func) {
+    while (true) {
+        if (func(arr[0])) break;
+        else arr.shift();
     }
-    return currentLCM;
+    return arr;
 }
 
-smallestCommons([1, 5]);
+dropElements([1, 2, 3], function (n) {
+    return n < 3;
+});
