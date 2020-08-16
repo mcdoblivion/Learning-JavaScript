@@ -1,16 +1,14 @@
-function sumPrimes(num) {
-    let isPrime = (number) => {
-        for (let i = 2; i * i <= number; i++) {
-            if (number % i === 0) return false;
-        }
-        return number > 1;
-    };
+function smallestCommons(arr) {
+    let [min, max] = arr.sort((a, b) => a - b);
 
-    let sum = 0;
-    for (let i = 2; i <= num; i++) {
-        if (isPrime(i)) sum += i;
+    let gcd = (a, b) => (b === 0 ? a : gcd(b, a % b));
+    let lcm = (a, b) => (a * b) / gcd(a, b);
+
+    let currentLCM = min;
+    while (min < max) {
+        currentLCM = lcm(currentLCM, ++min);
     }
-    return sum;
+    return currentLCM;
 }
 
-sumPrimes(10);
+smallestCommons([1, 5]);
